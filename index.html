@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>sdbforhire.com</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<link href="assets/fonts/css/fontawesome-all.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300, 400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		<link href="prod/index.css" rel="stylesheet">
+		<script src="prod/anims.js"></script> 
+		<script src="prod/items.js" defer></script>
+	</head>
+	<body>
+		<div id="app" page="home">
+			<i class="fal fa-home icon"></i>
+			<i class="fal fa-briefcase icon"></i>
+			<i class="fal fa-code icon"></i>
+			<i class="fal fa-envelope icon"></i>
+			<div class="nav-elem" id="nav">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="nav-elem toggled" id="menu">
+				<div class="nav-elem toggled" id="options">
+					<span class="option active" id="home">home</span>
+					<span class="option" id="work_samples">work</span>
+					<span class="option" id="code_samples">code</span>
+					<span class="option" id="contact">contact</span>
+				</div>
+				<div>
+					<div id="init"></div>
+					<div id="pre"></div>
+				</div>
+				<div id="loader">
+					<div id="status"></div>
+				</div>
+			</div>
+			<div id="pt">
+				<canvas id="canvas"></canvas>
+			</div>
+			<div class="page home initialized">
+				<div class="me-hex hex">
+					<i class="fal fa-user"></i>
+				</div>
+				<h1>Hello, I'm <span>Stephen</span>.</h1>
+				<h1 class="title">I'm a <span>software engineer</span>.</h1>
+				<div id="home-con">
+					<div class="home-inner lang">
+						<div class="skill">
+							<div class="skill-hex hex">HTML<br><span class="skill-level" level="100"></span></div>
+							<div class="bar">
+								<div class="level html"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">CSS<br><span class="skill-level" level="95"></span></div>
+							<div class="bar">
+								<div class="level css"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">JavaScript<br><span class="skill-level" level="95"></span></div>
+							<div class="bar">
+								<div class="level js"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">TypeScript<br><span class="skill-level" level="80"></span></div>
+							<div class="bar">
+								<div class="level ts"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">PHP<br><span class="skill-level" level="75"></span></div>
+							<div class="bar">
+								<div class="level php"></div>
+							</div>
+						</div>
+					</div>
+					<div class="home-inner fram">
+						<div class="skill">
+							<div class="skill-hex hex">Angular JS<br><span class="skill-level" level="90"></span></div>
+							<div class="bar">
+								<div class="level ang1"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">Angular 2+<br><span class="skill-level" level="80"></span></div>
+							<div class="bar">
+								<div class="level ang2"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">jQuery<br><span class="skill-level" level="100"></div>
+							<div class="bar">
+								<div class="level jq"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">React<br><span class="skill-level" level="75"></div>
+							<div class="bar">
+								<div class="level react"></div>
+							</div>
+						</div>
+						<div class="skill">
+							<div class="skill-hex hex">Bootstrap<br><span class="skill-level" level="100"></div>
+							<div class="bar">
+								<div class="level boot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page work_samples">
+				<div id="work-con">
+					<div id="item-preview">
+						<div class="item show">
+							<div class="item-pic pp i1">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Smithsonian Student Adventures</h1>
+								<button class="btn item-toggle" id="ssa">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i2">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Exodus Road</h1>
+								<button class="btn item-toggle" id="exodus">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i3">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Premios Group</h1>
+								<button class="btn item-toggle" id="premios">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i4">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Grain Trust</h1>
+								<button class="btn item-toggle" id="grain">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i5">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Global Training Institute</h1>
+								<button class="btn item-toggle" id="gti">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i6">
+								<div class="featured">
+									<i class="fal fa-star"></i>
+									Featured
+									<i class="fal fa-star"></i>
+								</div>
+							</div>
+							<div class="toggle-con">
+								<h1 class="item-name">Foundry Builders</h1>
+								<button class="btn item-toggle" id="foundry">
+									<i class="fal fa-eye"></i>
+									Details
+								</button>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i7"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Hike Doggie</h1>
+								<a class="btn nf" href="http://hikedoggie.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i8"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Telehealth One</h1>
+								<a class="btn nf" href="https://www.t1telehealth.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i9"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Denver Dents</h1>
+								<a class="btn nf" href="http://denverdents.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i10"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Diabetes Care Group</h1>
+								<a class="btn nf" href="http://diabetescaregrp.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i11"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Olson Lawn Care</h1>
+								<a class="btn nf" href="http://www.olsonlawncare.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-pic pp i12"></div>
+							<div class="toggle-con">
+								<h1 class="item-name">Think Tank Tattoo</h1>
+								<a class="btn nf" href="https://thinktanktattoo.com/" target="_blank">
+									Visit
+									<i class="fal fa-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="item-controls">
+						<div class="item-control" id="back">
+							<i class="fal fa-angle-double-left"></i>
+						</div>
+						<div id="pic-indicators">
+							<div id="item-slider">
+								<div class="item-indicator">
+									<div class="indicator-inner i1 pp show" id="0"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i2" id="1"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i3" id="2"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i4" id="3"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i5" id="4"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i6" id="5"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i7" id="6"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i8" id="7"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i9" id="8"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i10" id="9"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i11" id="10"></div>
+								</div>
+								<div class="item-indicator">
+									<div class="indicator-inner pp i12" id="11"></div>
+								</div>
+							</div>
+						</div>
+						<div class="item-control" id="move">
+							<i class="fal fa-angle-double-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page code_samples">
+				<div id="code-con" tab="skillsjs">
+					<div id="tabs-con">
+						<div class="tab s" id="skillsjs">skills.js</div>
+						<div class="tab w" id="workjs">work.js</div>
+						<div class="tab f" id="formjs">form.js</div>
+					</div>
+					<div id="the-code">
+						<div class="code s">
+							<pre>
+								<code>
+<div><span class="str">"use strict"</span>;</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">stop</span>(<span class="this">int</span>) {</div>
+<div>	<span class="func">clearInterval</span>(int);</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">skillLevel</span>(<span class="this">skill</span>, <span class="this">delay</span>) {</div>
+<div>	<span class="dec">var</span> i <span class="op">=</span> <span class="num">0</span>,</div>
+<div>			str <span class="op">=</span> <span class="str">""</span>,</div>
+<div>			int;</div>
+<div>	<span class="dec">const</span> n <span class="op">=</span> <span class="dec">Number</span>(skill.<span class="func">getAttribute</span>(<span class="str">"level"</span>)),</div>
+<div>				t <span class="op">=</span> <span class="num">100</span> <span class="op">/</span> n <span class="op">+</span> <span class="num">10</span>;</div>
+<div>	<span class="func">setTimeout</span>(<span class="dec">function</span>() {</div>
+<div>		int <span class="op">=</span> <span class="func">setInterval</span>(<span class="dec">function</span>() {</div>
+<div>			skill.textContent <span class="op">=</span> str <span class="op">=</span> i;</div>
+<div>			i <span class="op"><</span> n <span class="op">?</span> i<span class="op">++</span> <span class="op">:</span> <span class="func">stop</span>(int);</div>
+<div>		}, t);</div>
+<div>	}, delay);</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">doSkillLevels</span>() {</div>
+<div>	<span class="dec">const</span> skills <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementsByClassName</span>(<span class="str">"skill-level"</span>);</div>
+<div>	<span class="dec">var</span> i <span class="op">=</span> skills.length;</div>
+<div>	<span class="op">while</span>(i<span class="op">--</span>) {</div>
+<div>		<span class="func">skillLevel</span>(skills[i], (i<span class="op">+</span><span class="num">1</span>) <span class="op">*</span> <span class="num">100</span>);</div>
+<div>	}</div>
+<div>}</div>
+								</code>
+							</pre>
+						</div>
+						<div class="code w">
+							<pre>
+								<code>
+<div><span class="str">"use strict"</span>;</div>
+<div> </div>
+<div><span class="dec">const</span> itemToggle <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementsByClassName</span>(<span class="str">"item-toggle"</span>),</div>
+<div>			overlay <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"overlay"</span>),</div>
+<div>			modal <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"modal"</span>),</div>
+<div>			container <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"images"</span>),</div>
+<div>			indicator <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"indicator"</span>),</div>
+<div>			name <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"item-name"</span>),</div>
+<div>			details <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"item-details"</span>),</div>
+<div>			link <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementById</span>(<span class="str">"item-link"</span>),</div>
+<div>			modalExit <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementsByClassName</span>(<span class="str">"exit"</span>);</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">initItem</span>() {</div>
+<div>	<span class="dec">const</span> item <span class="op">=</span> workItems[<span class="this">this</span>.id],</div>
+<div>				len <span class="op">=</span> item.images.length;</div>
+<div>	<span class="dec">var</span> i <span class="op">=</span> <span class="num">0</span>;</div>
+<div>	<span class="op">while</span>(i <span class="op"><</span> len) {</div>
+<div>		<span class="dec">const</span> elem <span class="op">=</span> <span class="dec">document</span>.<span class="func">createElement</span>(<span class="str">"div"</span>);</div>
+<div>		elem.<span class="func">setAttribute</span>(<span class="str">"index"</span>, i);</div>
+<div>		elem.style.backgroundImage <span class="op">=</span> <span class="str">"url("</span> <span class="op">+</span> item.images[i] <span class="op">+</span> <span class="str">")"</span>;</div>
+<div>		elem.style.width <span class="op">=</span> <span class="num">100</span> <span class="op">/</span> len <span class="op">+</span> <span class="str">"%"</span>;</div>
+<div>		container.<span class="func">appendChild</span>(elem);</div>
+<div>		i<span class="op">++</span>;</div>
+<div>	}</div>
+<div>	container.children[<span class="num">0</span>].classList.<span class="func">add</span>(<span class="str">"current"</span>);</div>
+<div>	container.style.width <span class="op">=</span> <span class="num">100</span> <span class="op">*</span> len <span class="op">+</span> <span class="str">"%"</span>;</div>
+<div>	indicator.style.width <span class="op">=</span> <span class="num">100</span> <span class="op">/</span> len <span class="op">+</span> <span class="str">"%"</span>;</div>
+<div>	name.textContent <span class="op">=</span> item.name;</div>
+<div>	details.textContent <span class="op">=</span> item.details;</div>
+<div>	link.<span class="func">setAttribute</span>(<span class="str">"href"</span>, item.link);</div>
+<div>	overlay.classList.<span class="func">add</span>(<span class="str">"active"</span>);</div>
+<div>	modal.classList.<span class="func">add</span>(<span class="str">"active"</span>);</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">slide</span>() {</div>
+<div>	<span class="dec">const</span> items <span class="op">=</span> container.children,</div>
+<div>				len <span class="op">=</span> items.length,</div>
+<div>				elem <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementsByClassName</span>(<span class="str">"current"</span>)[<span class="num">0</span>],</div>
+<div>				current <span class="op">=</span> <span class="dec">Number</span>(elem.<span class="func">getAttribute</span>(<span class="str">"index"</span>));</div>
+<div>	<span class="dec">var</span> i;</div>
+<div>	<span class="this">this</span>.id <span class="op">===</span> <span class="str">"next"</span> <span class="op">?</span> current <span class="op"><</span> len<span class="op">-</span><span class="num">1</span> <span class="op">?</span> i <span class="op">=</span> current <span class="op">+</span><span class="num">1</span> <span class="op">:</span> i <span class="op">=</span> <span class="num">0</span> <span class="op">:</span> current <span class="op">!==</span> <span class="num">0</span> <span class="op">?</span> i <span class="op">=</span> current <span class="op">-</span><span class="num">1</span> <span class="op">:</span> i <span class="op">=</span> len <span class="op">-</span><span class="num">1</span>;</div>
+<div>	container.style.transform <span class="op">=</span> <span class="str">"translateX("</span> <span class="op">+</span> i <span class="op">*</span> <span class="op">-</span><span class="num">100</span> <span class="op">/</span> len <span class="op">+</span> <span class="str">"%)"</span>;</div>
+<div>	indicator.style.transform <span class="op">=</span> <span class="str">"translateX("</span> <span class="op">+</span> i <span class="op">*</span> <span class="num">100</span> <span class="op">+</span> <span class="str">"%)"</span>;</div>
+<div>	elem.classList.remove(<span class="str">"current"</span>);</div>
+<div>	items[i].classList.add(<span class="str">"current"</span>);</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">reset</span>() {</div>
+<div>	overlay.classList.<span class="func">remove</span>(<span class="str">"active"</span>);</div>
+<div>	modal.classList.<span class="func">remove</span>(<span class="str">"active"</span>);</div>
+<div>	container.innerHTML <span class="op">=</span> <span class="str">""</span>;</div>
+<div>	container.style.transform <span class="op">=</span> <span class="str">"translateX(0%)"</span>;</div>
+<div>	indicator.style.transform <span class="op">=</span> <span class="str">"translateX(0%)"</span>;</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">initEvent</span>(<span class="this">elems</span>, <span class="this">func</span>) {</div>
+<div>	<span class="dec">var</span> i <span class="op">=</span> elems.length;</div>
+<div>	<span class="op">while</span>(i<span class="op">--</span>) {</div>
+<div>		elems[i].<span class="func">addEventListener</span>(<span class="str">"click"</span>, func);</div>
+<div>	}</div>
+<div>}</div>
+<div> </div>
+<div><span class="func">initEvent</span>(itemToggle, initItem);</div>
+<div><span class="func">initEvent</span>(modalBtn, slide);</div>
+<div><span class="func">initEvent</span>(modalExit, reset);</div>							
+								</code>
+							</pre>
+						</div>
+						<div class="code f">
+							<pre>
+								<code>
+<div><span class="str">"use strict"</span>;</div>
+<div> </div>
+<div><span class="dec">const</span> form <span class="op">=</span> <span class="dec">document</span>.<span class="func">getelementById</span>(<span class="str">"sdbforhireform"</span>),</div>
+<div>			fields <span class="op">=</span> <span class="dec">document</span>.<span class="func">getElementsByClassName</span>(<span class="str">"form-elem"</span>);</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">botSwater</span>() {</div>
+<div>	<span class="op">return</span> <span class="op">!</span><span class="dec">document</span>.<span class="func">getelementById</span>(<span class="str">"botswater"</span>).value;</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">validate</span>() {</div>
+<div>	<span class="dec">const</span> rgx <span class="op">=</span> <span class="str">/</span><span class="op">^</span><span class="str">(</span><span class="num">[\w-]</span><span class="op">+</span><span class="str">(?:</span><span class="num">\.[\w-]</span><span class="op">+</span><span class="str">)</span><span class="op">*</span><span class="str">)@((?:</span><span class="num">[\w-]</span><span class="op">+</span><span class="num">\.</span><span class="str">)</span><span class="op">*</span><span class="num">\w[\w-]</span><span class="op">{0,66}</span><span class="str">)</span><span class="num">\.</span><span class="str">(</span><span class="num">[a-z]</span><span class="op">{2,6}</span><span class="str">(?:</span><span class="num">\.[a-z]</span><span class="op">{2}</span><span class="str">)</span><span class="op">?</span><span class="str">)</span><span class="op">$</span><span class="str">/</span><span class="op">i</span>,</div>
+<div>				email <span class="op">=</span> fields.email.value,</div>
+<div>				len <span class="op">=</span> fields.length;</div>
+<div>	<span class="dec">var</span> i <span class="op">=</span> <span class="num">0</span>;</div>
+<div>	<span class="op">while</span>(i <span class="op"><</span> len) {</div>
+<div>		<span class="op">if</span>(fields[i].required <span class="op">&&</span> <span class="op">!</span>fields[i].value) {</div>
+<div>			fields[i].parentNode.classList<span class="func">.add</span>(<span class="str">"alert"</span>);</div>
+<div>			<span class="func">setTimeout</span>(<span class="dec">function</span>() {</div>
+<div>				fields[i].parentNode.classList<span class="func">.remove</span>(<span class="str">"alert"</span>);</div>
+<div>			}, <span class="num">2000</span>);</div>
+<div>			<span class="op">return</span> <span class="num">false</span>;</div>
+<div>		}</div> 
+<div>		i<span class="op">++</span>;</div>
+<div>	}</div>
+<div>	<span class="op">return</span> rgx.<span class="func">test</span>(email) <span class="op">?</span> <span class="num">true</span> <span class="op">:</span> (<span class="dec">function</span>() {</div>
+<div>		fields.email.parentNode.classList<span class="func">.add</span>(<span class="str">"alert"</span>);</div>
+<div>		<span class="func">setTimeout</span>(<span class="dec">function</span>() {</div>
+<div>			fields.email.parentNode.classList<span class="func">.remove</span>(<span class="str">"alert"</span>);</div>
+<div>		}, <span class="num">2000</span>);</div>
+<div>	}());</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">function</span> <span class="function">getData</span>() {</div>
+<div>	<span class="dec">var</span> data <span class="op">=</span> {},</div>
+<div>			arr <span class="op">=</span> [],</div>
+<div>			i <span class="op">=</span> fields.length;</div>
+<div>	<span class="op">while</span>(<span class="op">--</span>i) {</div>
+<div>		<span class="op">if</span>(fields[i].required <span class="op">||</span> fields[i].value) data[fields[i].name] <span class="op">=</span> fields[i].value, arr.<span class="func">push</span>(fields[i].name);</div>
+<div>	}</div>
+<div>	data.format <span class="op">=</span> <span class="dec">JSON</span>.<span class="func">stringify</span>(arr.<span class="func">reverse</span>());</div>
+<div>	<span class="op">return</span> data;</div>
+<div>}</div>
+<div> </div>	 
+<div><span class="dec">function</span> <span class="function">sendData</span>() {</div>
+<div>	<span class="op">return</span> <span class="op">!</span><span class="func">botSwater</span>() <span class="op">||</span> <span class="op">!</span><span class="func">validate</span>() <span class="op">?</span> <span class="num">null</span> <span class="op">:</span> (<span class="dec">function</span>() {</div>
+<div>		<span class="dec">const</span> data <span class="op">=</span> <span class="func">getData</span>(),</div>
+<div>					xhr <span class="op">=</span> <span class="op">new</span> <span class="dec">XMLHttpRequest</span>(),</div>
+<div>					encoded <span class="op">=</span> <span class="dec">Object</span>.<span class="func">keys</span>(data).<span class="func">map</span>(<span class="dec">function</span>(<span class="this">i</span>) {</div>
+<div>						<span class="op">return</span> <span class="func">encodeURIComponent</span>(i) <span class="op">+</span> <span class="str">"="</span> <span class="op">+</span> <span class="func">encodeURIComponent</span>(data[i]);</div>
+<div>					}).<span class="func">join</span>(<span class="str">"&"</span>);</div>
+<div>		xhr.<span class="func">open</span>(<span class="str">"POST"</span>, <span class="str">"https://script.google.com/macros/s/AKfycbwnaIMDrxH75eIoE5sW8kVrTHE3Nk9S5UxM3SE-vnuL5FExOBg/exec"</span>);</div>
+<div>		xhr.<span class="func">setRequestHeader</span>(<span class="str">"Content-Type"</span>, <span class="str">"application/x-www-form-urlencoded"</span>);</div>
+<div>		xhr.<span class="func">send</span>(encoded);</div>
+<div>	}());</div>
+<div>}</div>
+<div> </div>
+<div><span class="dec">document</span>.<span class="func">getelementById</span>(<span class="str">"submit"</span>)<span class="func">.addEventListener</span>(<span class="str">"click"</span>, <span class="dec">function</span>(<span class="this">evt</span>) {</div>
+<div>	evt.<span class="func">preventDefault</span>();</div>
+<div>	<span class="func">sendData</span>();</div>
+<div>});</div>
+								</code>
+							</pre>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page contact">
+				<form id="sdbforhireform">
+					<input class="form-elem" id="botswater" type="text" value="">
+					<div class="field-group">
+						<input class="form-elem" id="name" type="text" name="name" required="true" autocomplete="off">
+						<span class="input-txt">Name</span>
+						<div class="warning">
+							<div class="carrat"></div>
+							Please provide a name
+						</div>
+					</div>
+					<div class="field-group">
+						<input class="form-elem" id="email" type="text" name="email" required="true" autocomplete="off">
+						<span class="input-txt">Email</span>
+						<div class="warning">
+							<div class="carrat"></div>
+							Please provide a valid email
+						</div>
+					</div>
+					<div class="field-group">
+						<input class="form-elem" id="number" type="text" name="number" autocomplete="off">
+						<span class="input-txt">Number</span>
+					</div>
+					<div class="field-group" style="margin-bottom: 5px;">
+						<textarea class="form-elem" id="message" type="text" name="message" placeholder="Message..." required="true"></textarea>
+						<div class="warning">
+							<div class="carrat"></div>
+							Please provide a message
+						</div>
+						<div id="thanks">
+							<i class="fas fa-comment-alt-smile" style="font-size: 40px;"></i>
+							<div style="margin-top: 5px; white-space: nowrap; font-size: 20px;">Your submission has been received!<br>I will get back with you ASAP!</div>
+						</div>
+					</div>
+					<button class="btn" id="submit">
+						Send
+						<i class="fal fa-paper-plane"></i>
+					</button>
+				</form>
+			</div>
+			<div class="exit" id="overlay"></div>
+			<div id="modal">
+				<div id="modal-top">
+					<div id="images"></div>
+					<div class="control" id="prev">
+						<i class="fal fa-angle-left"></i>
+					</div>
+					<div class="control" id="next">
+						<i class="fal fa-angle-right"></i>
+					</div>
+					<div id="indicator-con">
+						<div id="indicator"></div>
+					</div>
+				</div>
+				<div id="modal-bottom">
+					<h1 id="item-name"></h1>
+					<p id="item-details"></p>
+					<div id="sep"></div>
+					<div style="display: block; width: 100%;">
+						<a class="btn" id="item-link" target="_blank">
+							<i class="fal fa-external-link"></i>
+							Visit
+						</a>
+						<div class="exit" id="exit">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="prod/index.js" async defer></script>
+	</body>
+</html>
